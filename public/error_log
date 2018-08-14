@@ -1,0 +1,8 @@
+[05-Aug-2018 07:33:43 UTC] PHP Fatal error:  Uncaught RuntimeException: APP_ENV environment variable is not defined. You need to define environment variables for configuration or add "symfony/dotenv" as a Composer dependency to load variables from a .env file. in /home/u2881773/public_html/bambootajur.com/user1/www/public/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/u2881773/public_html/bambootajur.com/user1/www/public/index.php on line 13
+[05-Aug-2018 07:33:47 UTC] PHP Fatal error:  Uncaught RuntimeException: APP_ENV environment variable is not defined. You need to define environment variables for configuration or add "symfony/dotenv" as a Composer dependency to load variables from a .env file. in /home/u2881773/public_html/bambootajur.com/user1/www/public/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/u2881773/public_html/bambootajur.com/user1/www/public/index.php on line 13

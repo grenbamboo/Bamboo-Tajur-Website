@@ -1,0 +1,11 @@
+index:
+   path: /
+   controller: App\Controller\DefaultController::index
+
+send_inquiry:
+    path: /send-inquiry
+    defaults: { _controller: App\Controller\DefaultController::sendInquiry }
+
+send_email:
+    path: /send-email
+    defaults: { _controller: App\Controller\DefaultController::sendEmail }

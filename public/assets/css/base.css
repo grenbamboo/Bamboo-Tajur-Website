@@ -1,0 +1,924 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/OpenType/Montserrat-Bold.ttf'); /* Legacy iOS */
+   font-weight: 900;
+   font-style: normal;
+ }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/OpenType/Montserrat-SemiBold.ttf'); /* Legacy iOS */
+   font-weight: 700;
+   font-style: normal;
+ }
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/OpenType/Montserrat-Medium.ttf'); /* Legacy iOS */
+   font-weight: 500;
+   font-style: normal;
+ }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/OpenType/Montserrat-Light.ttf'); /* Legacy iOS */
+   font-weight: 300;
+   font-style: normal;
+ }
+  
+body{
+	font-family: 'Montserrat';
+	padding: 20px;
+  background-color: #fffcf0;
+}
+
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+   /* border-radius: 10px;*/
+    background-color: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    /*border-radius: 10px;*/
+     background: white;
+    border: 2px solid #008a72; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: white;
+  border: 2px solid #008a72; 
+}
+
+p{
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+h1{
+  font-family: 'Montserrat';
+  font-size: 42px;
+  font-weight: 900; 
+  margin-top: -10px;
+  transition: all 0.3s ease;
+  /*transition-delay: 0.2s;*/
+}
+
+
+h2{
+  font-family: 'Montserrat';
+  font-size: 35px;
+  font-weight: 900;
+  text-align: center;
+}
+
+h3{
+  font-family: 'Montserrat';
+  font-size: 33px;
+  font-weight: 900;
+  text-align: center;
+}
+h4{
+  font-family: 'Montserrat';
+  font-size: 27px;
+  font-weight: 900;
+  text-align: ;
+}
+
+.container{
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.breadcrumb{
+  margin-bottom: 0px;
+  padding-left: 0px;
+  font-weight: 700;
+  font-size: 11px;
+   background-color: #fffcf0;
+}
+
+.breadcrumb li a{
+  color: #333;
+}
+
+.sub-title{
+  background: url('../img/headers.jpg') no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+  background-size: cover;
+    -o-background-size: cover;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.sub-title .container{
+  margin-bottom: 0;
+  margin-top: -50px;
+}
+
+.sub-title h2{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.top-nav-collapse {
+    padding: 0; 
+    background: rgba(50,60,70, 0.9);
+}
+
+.option {
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-delay: 0;
+    -webkit-animation-iteration-count: 1;
+}
+
+.base-list h4{
+  margin-bottom: 80px;
+}
+
+.base-list div p{
+  
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+@media (min-width: 1024px){
+  .base-list div:nth-child(4n+5){
+    clear:both;
+  }
+}
+.btn.btn-default{ 
+  font-weight: 700;
+  border:2px solid #008a72;
+  border-radius: 0;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.btn.btn-default:hover,
+.btn.btn-default:focus{ 
+  background-color: #008a72;
+  color:#fff;
+}
+.btn.btn-service{ 
+  color: #008a72;
+  font-weight: 700;
+  font-size: 21px;
+  border:2px solid #008a72;
+  border-radius: 0;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.btn.btn-service:hover,
+.btn.btn-service:focus{ 
+  background-color: #008a72;
+  color:#fff;
+}
+.navbar{
+	padding: 20px;
+	background-color: #fff6d3;
+   border-bottom: 3px solid #008a72;
+}
+.navbar .container{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navbar .navbar-brand{
+	display: block;
+  max-width:210px;
+  position: relative;
+  margin-top: -12px;
+  margin-left: 8px;
+  margin-right: 20px;
+}
+
+.navbar .navbar-nav li a{
+  color: #333;
+}
+
+
+
+.navbar ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+    background-color: white;
+    box-shadow: none;
+  }
+  .navbar .dropdown-menu > li > a {
+    padding: 8px 20px;
+    font-weight: 900;
+  }
+
+
+.mobileMenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.mobileMenu-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mobileMenu-content .menuborder{
+    border-bottom: 3px solid #008a72;
+}
+
+.mobileMenu a {
+    padding: 20px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 900;
+    color: #333333;
+    display: block;
+    transition: 0.3s;
+}
+
+.mobileMenu a:hover, .overlay a:focus {
+    color: #555555;
+}
+
+.mobileMenu .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 50px;
+    color: #008a72;
+    font-weight: 700;
+}
+
+.panel-default>.panel-heading{
+  background-color: white;
+}
+
+.panel-heading a{
+  font-size: 24px;
+  font-weight: 900;
+} 
+
+.panel-heading .clickable
+{
+    cursor: pointer;
+}
+
+.panel-heading .clickable .glyphicon
+{
+    display: inline-block;
+  
+    border-radius: 4px
+}
+
+.panel-heading span
+{
+    
+    font-size: 15px;
+    
+}
+a.clickable { color: inherit; }
+a.clickable:hover { text-decoration:none;}
+
+#myBtn {
+    color: #008a72;
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 100px;
+    display: none;
+    width: 40px;
+    height: 40px;
+   
+    background-color: transparent;
+    border: 2px solid #008a72;
+    border-radius: 15px 50px 30px;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 100;
+    opacity: 0.75;
+   /* border-style: none;*/
+    
+ 
+}
+#myBtn i{
+  font-size: 28px;
+  line-height: 20px;
+}
+
+#myBtn:hover,#myBtn:focus {
+     /* Add a dark-grey background on hover */
+    opacity: 1;
+}
+
+footer{
+  margin-left:-20px;
+  margin-right:-20px;
+  background-color: #ebebeb;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-bottom: -20px;
+
+}
+footer .container{
+  margin-bottom: 20px;
+}
+footer .lifull{
+  max-width: 270px;
+}
+
+footer ul li{
+  padding-top: 15px;
+  margin-left: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+footer ul li a{
+  color: #333;
+}
+footer ul li a:hover,
+footer ul li a:focus{
+  color: #333;
+}
+
+footer p{
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+#map {
+  height: 100%;
+  position: absolute; 
+  margin-left: -20px;
+  margin-right: -20px;
+  overflow: hidden;
+  left: 0; 
+  right: 0; 
+  z-index: 0;
+  bottom: 10px;
+}
+
+#container {
+  z-index: 100;
+  position: relative;
+   margin-bottom: 80px;
+   margin-top: 60px;
+     background-color: #f3f3f3;
+  padding: 30px;
+}
+
+
+#rumah-services{
+  background: url('../img/service-rumah.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+  background-size: cover;
+    -o-background-size: cover;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 80px;
+ /* padding-top: 5px;
+  padding-bottom: 10px;*/
+  transition: all 0.3s ease;
+}
+#rumah-services .row{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+#rumah-services .overlay{
+   background-color: transparent;
+    transition: background 0.5s ease;
+}
+
+#rumah-services:hover .overlay{
+   background-color: rgba(243,243,243,0.9);
+}
+
+
+#rumah-services .base{
+  background-color: rgba(243,243,243,0.9);
+  padding: 30px;
+  transition: background 0.5s ease;
+}
+
+#rumah-services:hover .base{
+  background-color: transparent;
+}
+
+#rumah-services .btn{
+ margin-top: 70px;
+ opacity: 0;
+ transition: all 0.3s ease;
+}
+
+
+#rumah-services:hover .btn{
+   opacity: 1;
+}
+
+
+
+
+#produk-services{
+  background: url('../img/service-produk.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+  background-size: cover;
+    -o-background-size: cover;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 80px;
+ /* padding-top: 5px;
+  padding-bottom: 10px;*/
+  transition: all 0.3s ease;
+}
+
+#produk-services .row{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#produk-services .overlay{
+   background-color: transparent;
+    transition: background 0.5s ease;
+}
+
+#produk-services:hover .overlay{
+   background-color: rgba(243,243,243,0.9);
+}
+
+
+#produk-services .base{
+  background-color: rgba(243,243,243,0.9);
+  padding: 30px;
+  transition: all 0.5s ease;
+}
+
+#produk-services:hover .base{
+  background-color: transparent;
+}
+
+#produk-services .btn{
+ margin-top: 70px;
+ opacity: 0;
+ transition: all 0.3s ease;
+}
+
+
+#produk-services:hover .btn{
+   opacity: 1;
+}
+
+
+
+#jasa-services{
+  background: url('../img/service-jasa.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+  background-size: cover;
+    -o-background-size: cover;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 80px;
+ /* padding-top: 5px;
+  padding-bottom: 10px;*/
+  transition: all 0.3s ease;
+}
+
+#jasa-services .row{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#jasa-services .overlay{
+   background-color: transparent;
+    transition: background 0.5s ease;
+}
+
+#jasa-services:hover .overlay{
+   background-color: rgba(243,243,243,0.9);
+}
+
+
+#jasa-services .base{
+  background-color: rgba(243,243,243,0.9);
+  padding: 30px;
+  transition: all 0.5s ease;
+}
+
+#jasa-services:hover .base{
+  background-color: transparent;
+}
+
+#jasa-services .btn{
+ margin-top: 70px;
+ opacity: 0;
+ transition: all 0.3s ease;
+}
+
+
+#jasa-services:hover .btn{
+   opacity: 1;
+}
+
+
+
+#concierge-services{
+  background: url('../img/service-concierge.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+  background-size: cover;
+    -o-background-size: cover;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 80px;
+ /* padding-top: 5px;
+  padding-bottom: 10px;*/
+  transition: all 0.3s ease;
+}
+
+#concierge-services .row{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#concierge-services .overlay{
+   background-color: transparent;
+    transition: background 0.5s ease;
+}
+
+#concierge-services:hover .overlay{
+   background-color: rgba(243,243,243,0.9);
+}
+
+
+#concierge-services .base{
+  background-color: rgba(243,243,243,0.9);
+  padding: 30px;
+  transition: all 0.5s ease;
+}
+
+#concierge-services:hover .base{
+  background-color: transparent;
+}
+
+#concierge-services .btn{
+ margin-top: 70px;
+ opacity: 0;
+ transition: all 0.3s ease;
+}
+
+
+#concierge-services:hover .btn{
+   opacity: 1;
+}
+
+#sub-header-rumah{
+  background: url('../img/service-rumah.jpg') no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+  background-size: cover;
+    -o-background-size: cover;
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+#sub-header-rumah .logo-service{
+  max-width: 250px;
+  margin-top: 120px;
+  margin-bottom: 30px;
+}
+
+#sub-header-rumah h1{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#sub-header-rumah .btn{
+  margin-bottom: 100px;
+}
+
+#sub-header-concierge{
+  background: url('../img/service-concierge.jpg') no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+  background-size: cover;
+    -o-background-size: cover;
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+#sub-header-concierge .logo-service{
+  max-width: 250px;
+  margin-top: 120px;
+  margin-bottom: 30px;
+}
+
+#sub-header-concierge h1{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#sub-header-concierge .btn{
+  margin-bottom: 100px;
+}
+
+#sub-header-jasa{
+  background: url('../img/service-jasa.jpg') no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+  background-size: cover;
+    -o-background-size: cover;
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+#sub-header-jasa .logo-service{
+  max-width: 250px;
+  margin-top: 120px;
+  margin-bottom: 30px;
+}
+
+#sub-header-jasa h1{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#sub-header-jasa .btn{
+  margin-bottom: 100px;
+}
+
+#sub-header-produk{
+  background: url('../img/service-produk.jpg') no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+  background-size: cover;
+    -o-background-size: cover;
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+#sub-header-produk .logo-service{
+  max-width: 250px;
+  margin-top: 120px;
+  margin-bottom: 30px;
+}
+
+#sub-header-produk h1{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#sub-header-produk .btn{
+  margin-bottom: 100px;
+}
+
+@media (max-width:995px){
+      .container{
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    p{
+      font-size: 14px;
+    }
+
+    h1{
+      font-size: 36px;
+    }
+
+
+    h2{
+      font-size: 32px;
+    }
+
+    h3{
+      font-size: 30px;
+    }
+    h4{
+      font-size: 25px;
+    }
+    .navbar{
+      padding:10px;
+    }
+    .breadcrumb{
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+
+    footer{
+      padding-left: -20px;
+    }
+
+    footer .lifull{
+      margin-left:auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      max-width: 270px;
+    }
+    footer ul li{
+      margin-left:auto;
+      margin-right: auto;
+      font-size: 13px;
+    }
+    .sub-title{
+      padding-left: 20px;
+    }
+    #content-mobile{
+      height: 300px;
+      margin-top: 60px;
+    }
+    #rumah-mobile-service{
+      height: 100%;
+      background: url('../img/service-rumah.jpg');
+      background-position: center center;
+      background-size: auto auto;
+      background-repeat: no-repeat;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+    #concierge-mobile-service{
+      height: 100%;
+      background: url('../img/service-concierge.jpg');
+      background-position: center center;
+      background-size: auto auto;
+      background-repeat: no-repeat;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+    #jasa-mobile-service{
+      height: 100%;
+      background: url('../img/service-jasa.jpg');
+      background-position: right center;
+      background-size: auto auto;
+      background-repeat: no-repeat;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+    #produk-mobile-service{
+      height: 100%;
+      background: url('../img/service-produk.jpg');
+      background-position: left bottom;
+      background-size: auto auto;
+      background-repeat: no-repeat;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+    #sub-header-rumah h1, #sub-header-rumah .logo-service{
+      margin-left: 20px;
+    }
+    #sub-header-concierge h1, #sub-header-concierge .logo-service{
+      margin-left: 20px;
+    }
+    #sub-header-jasa h1, #sub-header-jasa .logo-service{
+      margin-left: 20px;
+    }
+    #sub-header-produk h1, #sub-header-produk .logo-service, #sub-header-produk .btn{
+      margin-left: 20px;
+    }
+    /*#map-content{
+      height: 300px;
+      margin-top: 60px;
+    }
+    #map {
+      height: 100%;
+      overflow: hidden;
+      padding-bottom: 22.25%;
+      padding-top: 30px;
+      position: relative;
+      top: 0;
+  }*/
+
+}
+@media (max-width: 1023px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width:779px){
+     #content-mobile{
+      height: 270px;
+     
+    }
+    #rumah-mobile-service{
+      
+      background-position: center center;
+      background-size: auto 150%;
+      
+    }
+    #concierge-mobile-service{
+     
+      background-position: center center;
+      background-size: auto 150%;
+      
+    }
+    #jasa-mobile-service{
+      
+      background-position: right center;
+      background-size: auto 150%;
+      
+    }
+    #produk-mobile-service{
+     
+      background-position: left bottom;
+      background-size: auto 150%;
+     
+    }
+
+    .navbar-right .lg-top{
+     border-top: 2px solid #d6d6d6;
+
+    }
+    #myBtn {
+      right: 60px;
+    }
+
+}
+
+@media (max-width:479px){
+    #sub-header-produk{
+      background: url('../img/service-produk.jpg') no-repeat left top fixed;
+      background-size: auto 100%;
+    }
+    #rumah-mobile-service{
+      
+      background-position: center center;
+      background-size: auto 100%;
+      
+    }
+    #concierge-mobile-service{
+     
+      background-position: center center;
+      background-size: auto 100%;
+      
+    }
+    #jasa-mobile-service{
+      
+      background-position: right center;
+      background-size: auto 100%;
+      
+    }
+    #produk-mobile-service{
+     
+      background-position: left bottom;
+      background-size: auto 100%;
+     
+    }
+
+    #myBtn {
+    right: 30px;
+    }
+
+}
