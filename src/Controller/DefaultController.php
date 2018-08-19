@@ -76,4 +76,20 @@ class DefaultController extends Controller
 
         return $response;
     }
+
+    public function about(){
+        return $this->render('about.html.twig');
+    }
+
+    public function project(Request $request){
+        return $this->render('project.html.twig');
+    }
+	
+	public function contact(){
+        return $this->render('contact.html.twig');
+    }
+	
+	public function news(){
+        return $this->render('news.html.twig');
+    }
 }

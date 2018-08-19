@@ -1,0 +1,830 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="{{path('index')}}">Beranda</a></li>
+			<li><a href="">Unit</a></li>        
+		</ol>
+	</div>
+	<section class="sub-title">
+      <div class="container">
+		<div class="row">
+	          <div class="col-md-5 col-xs-12">
+	            <h2>Unit</h2>
+	          </div>
+	     </div>
+       </div>
+	</section>
+	<div class="container">
+
+    	<ul class="nav nav-tabs">
+		    <li class="active"><a data-toggle="tab" href="#home">Type A</a></li>
+		    <li><a data-toggle="tab" href="#menu1">Type B</a></li>
+		    <li><a data-toggle="tab" href="#menu2">Type C</a></li>
+		</ul>
+
+		<div class="tab-content">
+		    <div id="home" class="tab-pane fade in active">
+		    	<br>
+		    	<div class="row">
+		    		<div class="col-sm-12 col-md-5 col-md-offset-1">
+		    			<img class="img-responsive" src="{{ asset('assets/img/Type-A.jpg') }}">
+		    		</div>
+		    		<div class="col-sm-12 col-md-5">
+		    			<h3 class="sub-unit">Type A</h3>		    			
+			      	<h4>
+			      		Rumah 2 Lantai
+			      	</h4>
+			      	<h4>
+			      		Luas Tanah 90m<sup>2</sup>
+			      	</h4>
+			      	<h4>
+			      		2 Bedroom, 2 Bathroom
+			      	</h4>
+		    		</div>
+		      	</div>
+		      	<br>
+		      	<div class="row">
+		      		<hr class="col-md-8 col-md-offset-2">
+		      	</div>
+		      	<br>
+		      	<div class="row">
+		      		<h3>Denah Bangunan</h3>
+		    		<div class="col-md-3 col-md-offset-3">
+		    			<img class="img-responsive" src="{{ asset('assets/img/DENAH-LT-1-TYPE-A-1.jpg') }}">
+		    			<center><p>Lantai 1</p></center>
+		    		</div>
+		    		<div class="col-md-3">
+		    			<img class="img-responsive" src="{{ asset('assets/img/DENAH-LT-2-TYPE-A-1.jpg') }}">
+		    			<center><p>Lantai 2</p></center>
+		    		</div>
+		      	</div>
+		      	<div class="row">
+		      		<hr class="col-md-8 col-md-offset-2">
+		      	</div>
+		      	<br>
+		      	<div class="row">
+		      		<h3>Spesifikasi Bangunan</h3>
+		    		<div class="col-md-8 col-md-offset-2">
+		    			<table class="table table-striped">
+		    				<thead>
+						      <tr>
+						        <th>Jenis</th>
+						        <th>Lokasi Pemasangan</th>
+						        <th>Keterangan</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      <tr>
+						        <td>Pondasi</td>
+						        <td>Dasar Bangunan</td>
+						        <td>Strauss Pile & Beton Bertulang dan Pondasi Batu Kali</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">Dinding</td>
+						        <td>Keliling Bangunan</td>
+						        <td>Pasangan Bata Merah + System Dry Mortar</td>
+						      </tr>
+						      <tr>
+						        <td>Balkon</td>
+						        <td>Kaca Tempered 10 mm + Hand Railing Stainless</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">Facade</td>
+						        <td>Dinding Depan Rumah</td>
+						        <td>Batu Hias Paras Jogja 20 x 40 x 2,5 cm,</td>
+						      </tr>
+						      <tr>
+						        <td>Dinding Belakang</td>
+						        <td>Tangga Monyet Besi siku 50 x 50 x 5</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="3" style="vertical-align: middle;">Finishing Cat</td>
+						        <td>Interior</td>
+						        <td>Kansai - Jepang</td>
+						      </tr>
+						      <tr>
+						        <td>Eksterior</td>
+						        <td>Kansai Weather Shield - Jepang</td>
+						      </tr>
+						      <tr>
+						        <td>Plafond</td>
+						        <td>Kansai - Jepang</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="6" style="vertical-align: middle;">Finishing Lantai</td>
+						        <td>Lantai Dasar dan Car Port</td>
+						        <td>Cor Beton</td>
+						      </tr>
+						      <tr>
+						        <td>Teras Depan</td>
+						        <td>Granit Tile Sandi Mas 60x60</td>
+						      </tr>
+						      <tr>
+						        <td>R.Tamu, R. Makan, R.Dapur</td>
+						        <td>Granit Tile Sandi Mas 60x60</td>
+						      </tr>
+						      <tr>
+						        <td>R. Tidur Lt.2</td>
+						        <td>Granit Tile Sandi Mas 60x60</td>
+						      </tr>
+						      <tr>
+						        <td>Tangga</td>
+						        <td>Step Nising, Granit Tile Sandi Mas 60x60</td>
+						      </tr>
+						      <tr>
+						        <td>Teras Belakang</td>
+						        <td>Granit Tile 10x30 Roman</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">R.Mandi/WC</td>
+						        <td>R.Mandi</td>
+						        <td>Granite tile 10x30 Roman</td>
+						      </tr>
+						      <tr>
+						        <td>Dinding R. Mandi</td>
+						        <td>Granite tile 10x30 Roman</td>
+						      </tr>
+						      <tr>
+						        <td>Carport</td>
+						        <td>Lantai 1</td>
+						        <td>Ceramic Tile 40 x 40 Sandimas</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">Struktur Atas</td>
+						        <td>Lantai 2</td>
+						        <td>Beton K300 + Besi Beton</td>
+						      </tr>
+						      <tr>
+						        <td>Tangki Air</td>
+						      	<td>Beton K300 + Besi Beton</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="6" style="vertical-align: middle;">Atap</td>
+						        <td>Rangka Atap</td>
+						        <td>Beton K300 + Rangka Besi + Besi Beton</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="5" style="vertical-align: middle;">Atap</td>
+						        <td>Beton K300 + Besi Beton + Water Proof</td>
+						      </tr>
+						      <tr><td>Fosroc/Silka</td></tr>
+						      <tr><td>Glass Wool T.50 mm</td></tr>
+						      <tr><td>Alumunium Foil</td></tr>
+						      <tr><td>Kawat Galvanis</td></tr>
+						      <tr>
+						        <td rowspan="3" style="vertical-align: middle;">Plafond</td>
+						        <td>R. Dalam</td>
+						        <td>Gypsum 9 mm Jayaboard, rangka Hollow Galvanis + List</td>
+						      </tr>
+						      <tr>
+						      	<td>R.Toilet</td>
+						      	<td>Kaisi Board 6 mm + List</td>
+						      </tr>
+						      <tr>
+						      	<td>Teras dan Balkon</td>
+						      	<td>Conwood + List</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">Kusen</td>
+						        <td>Pintu Eksterior + Sliding</td>
+						        <td>Alumunium YKK Fility kaca 5 mm Asahimas</td>
+						      </tr>
+						      <tr>
+						        <td>Jendela Eksterior + Sliding</td>
+						        <td>Alumunium YKK Fility kaca 5 mm Asahimas</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="5" style="vertical-align: middle;">Pintu dan Jendela</td>
+						        <td>Pintu Interior</td>
+						        <td>Daiken</td>
+						      </tr>
+						      <tr>
+						        <td>Pintu Utama</td>
+						        <td>Daiken</td>
+						      </tr>
+						      <tr>
+						        <td>Pintu Kamar</td>
+						        <td>Daiken</td>
+						      </tr>
+						      <tr>
+						        <td>Pintu R.Mandi/ WC</td>
+						        <td>UPVC</td>
+						      </tr>
+						      <tr>
+						        <td>Jendela Sliding</td>
+						        <td>Alumunium YKK Fility kaca 5 mm Asahimas</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="8" style="vertical-align: middle;">Sanitary</td>
+						        <td rowspan="4" style="vertical-align: middle;">R.Mandi Lt.1</td>
+						        <td>Closet Duduk TOTO</td>
+						      </tr>
+						      <tr><td>Jet Washer + Shower Set TOTO</td></tr>
+						      <tr><td>Tissue Holder, Wastafel TOTO</td></tr>
+						      <tr><td>Kran TOTO</td></tr>
+						      <tr>
+						       
+						        <td rowspan="4" style="vertical-align: middle;">R.Mandi Lt.2</td>
+						        <td>Closet Duduk TOTO</td>
+						      </tr>
+						      <tr><td>Jet Washer + Shower Set TOTO</td></tr>
+						      <tr><td>Tissue Holder, Wastafel TOTO</td></tr>
+						      <tr><td>Kran TOTO</td></tr>
+						      <tr>
+						        <td>Kitchen Sink</td>
+						        <td></td>
+						        <td>Royal + Krand Sink TOTO</td>
+						      </tr>
+						      <tr>
+						        <td>Listrik</td>
+						        <td></td>
+						        <td>2200VA</td>
+						      </tr>
+						      <tr>
+						        <td>Air Conditioning</td>
+						        <td></td>
+						        <td>Daikin 1 Pk, Inverter</td>
+						      </tr>
+						      <tr>
+						        <td>Exhaust Fan</td>
+						        <td></td>
+						        <td>KDK</td>
+						      </tr>
+						      <tr>
+						        <td>Lightning</td>
+						        <td></td>
+						        <td>Panasonic</td>
+						      </tr>
+						      <tr>
+						        <td>Outlet</td>
+						        <td></td>
+						        <td>Telp, MATV</td>
+						      </tr>
+						      <tr>
+						        <td>Instalasi Air Panas</td>
+						        <td></td>
+						        <td>Listrik</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2 style="vertical-align: middle;">Tangki Air</td>
+						        <td>Roof Water Tank</td>
+						        <td>500 lt Penguin + Sensor</td>
+						      </tr>
+						       <tr>
+						        <td>Ground Water Tank</td>
+						        <td>1000 lt Panca Wira</td>
+						      </tr>
+						      <tr>
+						        <td>Pompa Air</td>
+						        <td>Transfer GWT ke RTW</td>
+						        <td>Shimizu</td>
+						      </tr>
+						      <tr>
+						        <td>Spetic Tank</td>
+						        <td></td>
+						        <td>Bio Tank 1000 Liter Panca Wira</td>
+						      </tr>
+						    </tbody>
+						</table>
+		    		</div>
+		      	</div>
+		    </div>
+		    <div id="menu1" class="tab-pane fade">
+		      	<br>
+		    	<div class="row">
+		    		<div class="col-sm-12 col-md-5 col-md-offset-1">
+		    			<img class="img-responsive" src="{{ asset('assets/img/Type-B.jpg') }}">
+		    		</div>
+		    		<div class="col-sm-12 col-md-5">
+		    			<h3 class="sub-unit">Type B</h3>		    			
+			      	<h4>
+			      		Rumah 2 Lantai
+			      	</h4>
+			      	<h4>
+			      		Luas Tanah 90m<sup>2</sup>
+			      	</h4>
+			      	<h4>
+			      		3 Bedroom, 2 Bathroom
+			      	</h4>
+		    		</div>
+		      	</div>
+		      	<br>
+		      	<div class="row">
+		      		<hr class="col-md-8 col-md-offset-2">
+		      	</div>
+		      	<br>
+		      	<div class="row">
+		      		<h3>Denah Bangunan</h3>
+		    		<div class="col-md-3 col-md-offset-3">
+		    			<img class="img-responsive" src="{{ asset('assets/img/DENAH-LT-1-TYPE-B-1.jpg') }}">
+		    			<center><p>Lantai 1</p></center>
+		    		</div>
+		    		<div class="col-md-3">
+		    			<img class="img-responsive" src="{{ asset('assets/img/DENAH-LT-2-TYPE-B-1.jpg') }}">
+		    			<center><p>Lantai 2</p></center>
+		    		</div>
+		      	</div>
+		      	<div class="row">
+		      		<hr class="col-md-8 col-md-offset-2">
+		      	</div>
+		      	<br>
+		      	<div class="row">
+		      		<h3>Spesifikasi Bangunan</h3>
+		    		<div class="col-md-8 col-md-offset-2">
+		    			<table class="table table-striped">
+		    				<thead>
+						      <tr>
+						        <th>Jenis</th>
+						        <th>Lokasi Pemasangan</th>
+						        <th>Keterangan</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      <tr>
+						        <td>Pondasi</td>
+						        <td>Dasar Bangunan</td>
+						        <td>Strauss Pile & Beton Bertulang dan Pondasi Batu Kali</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">Dinding</td>
+						        <td>Keliling Bangunan</td>
+						        <td>Pasangan Bata Merah + System Dry Mortar</td>
+						      </tr>
+						      <tr>
+						        <td>Balkon</td>
+						        <td>Kaca Tempered 10 mm + Hand Railing Stainless</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">Facade</td>
+						        <td>Dinding Depan Rumah</td>
+						        <td>Batu Hias Paras Jogja 20 x 40 x 2,5 cm,</td>
+						      </tr>
+						      <tr>
+						        <td>Dinding Belakang</td>
+						        <td>Tangga Monyet Besi siku 50 x 50 x 5</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="3" style="vertical-align: middle;">Finishing Cat</td>
+						        <td>Interior</td>
+						        <td>Kansai - Jepang</td>
+						      </tr>
+						      <tr>
+						        <td>Eksterior</td>
+						        <td>Kansai Weather Shield - Jepang</td>
+						      </tr>
+						      <tr>
+						        <td>Plafond</td>
+						        <td>Kansai - Jepang</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="6" style="vertical-align: middle;">Finishing Lantai</td>
+						        <td>Lantai Dasar dan Car Port</td>
+						        <td>Cor Beton</td>
+						      </tr>
+						      <tr>
+						        <td>Teras Depan</td>
+						        <td>Granit Tile Sandi Mas 60x60</td>
+						      </tr>
+						      <tr>
+						        <td>R.Tamu, R. Makan, R.Dapur</td>
+						        <td>Granit Tile Sandi Mas 60x60</td>
+						      </tr>
+						      <tr>
+						        <td>R. Tidur Lt.2</td>
+						        <td>Granit Tile Sandi Mas 60x60</td>
+						      </tr>
+						      <tr>
+						        <td>Tangga</td>
+						        <td>Step Nising, Granit Tile Sandi Mas 60x60</td>
+						      </tr>
+						      <tr>
+						        <td>Teras Belakang</td>
+						        <td>Granit Tile 10x30 Roman</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">R.Mandi/WC</td>
+						        <td>R.Mandi</td>
+						        <td>Granite tile 10x30 Roman</td>
+						      </tr>
+						      <tr>
+						        <td>Dinding R. Mandi</td>
+						        <td>Granite tile 10x30 Roman</td>
+						      </tr>
+						      <tr>
+						        <td>Carport</td>
+						        <td>Lantai 1</td>
+						        <td>Ceramic Tile 40 x 40 Sandimas</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">Struktur Atas</td>
+						        <td>Lantai 2</td>
+						        <td>Beton K300 + Besi Beton</td>
+						      </tr>
+						      <tr>
+						        <td>Tangki Air</td>
+						      	<td>Beton K300 + Besi Beton</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="6" style="vertical-align: middle;">Atap</td>
+						        <td>Rangka Atap</td>
+						        <td>Beton K300 + Rangka Besi + Besi Beton</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="5" style="vertical-align: middle;">Atap</td>
+						        <td>Beton K300 + Besi Beton + Water Proof</td>
+						      </tr>
+						      <tr><td>Fosroc/Silka</td></tr>
+						      <tr><td>Glass Wool T.50 mm</td></tr>
+						      <tr><td>Alumunium Foil</td></tr>
+						      <tr><td>Kawat Galvanis</td></tr>
+						      <tr>
+						        <td rowspan="3" style="vertical-align: middle;">Plafond</td>
+						        <td>R. Dalam</td>
+						        <td>Gypsum 9 mm Jayaboard, rangka Hollow Galvanis + List</td>
+						      </tr>
+						      <tr>
+						      	<td>R.Toilet</td>
+						      	<td>Kaisi Board 6 mm + List</td>
+						      </tr>
+						      <tr>
+						      	<td>Teras dan Balkon</td>
+						      	<td>Conwood + List</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">Kusen</td>
+						        <td>Pintu Eksterior + Sliding</td>
+						        <td>Alumunium YKK Fility kaca 5 mm Asahimas</td>
+						      </tr>
+						      <tr>
+						        <td>Jendela Eksterior + Sliding</td>
+						        <td>Alumunium YKK Fility kaca 5 mm Asahimas</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="5" style="vertical-align: middle;">Pintu dan Jendela</td>
+						        <td>Pintu Interior</td>
+						        <td>Daiken</td>
+						      </tr>
+						      <tr>
+						        <td>Pintu Utama</td>
+						        <td>Daiken</td>
+						      </tr>
+						      <tr>
+						        <td>Pintu Kamar</td>
+						        <td>Daiken</td>
+						      </tr>
+						      <tr>
+						        <td>Pintu R.Mandi/ WC</td>
+						        <td>UPVC</td>
+						      </tr>
+						      <tr>
+						        <td>Jendela Sliding</td>
+						        <td>Alumunium YKK Fility kaca 5 mm Asahimas</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="8" style="vertical-align: middle;">Sanitary</td>
+						        <td rowspan="4" style="vertical-align: middle;">R.Mandi Lt.1</td>
+						        <td>Closet Duduk TOTO</td>
+						      </tr>
+						      <tr><td>Jet Washer + Shower Set TOTO</td></tr>
+						      <tr><td>Tissue Holder, Wastafel TOTO</td></tr>
+						      <tr><td>Kran TOTO</td></tr>
+						      <tr>
+						       
+						        <td rowspan="4" style="vertical-align: middle;">R.Mandi Lt.2</td>
+						        <td>Closet Duduk TOTO</td>
+						      </tr>
+						      <tr><td>Jet Washer + Shower Set TOTO</td></tr>
+						      <tr><td>Tissue Holder, Wastafel TOTO</td></tr>
+						      <tr><td>Kran TOTO</td></tr>
+						      <tr>
+						        <td>Kitchen Sink</td>
+						        <td></td>
+						        <td>Royal + Krand Sink TOTO</td>
+						      </tr>
+						      <tr>
+						        <td>Listrik</td>
+						        <td></td>
+						        <td>2200VA</td>
+						      </tr>
+						      <tr>
+						        <td>Air Conditioning</td>
+						        <td></td>
+						        <td>Daikin 1 Pk, Inverter</td>
+						      </tr>
+						      <tr>
+						        <td>Exhaust Fan</td>
+						        <td></td>
+						        <td>KDK</td>
+						      </tr>
+						      <tr>
+						        <td>Lightning</td>
+						        <td></td>
+						        <td>Panasonic</td>
+						      </tr>
+						      <tr>
+						        <td>Outlet</td>
+						        <td></td>
+						        <td>Telp, MATV</td>
+						      </tr>
+						      <tr>
+						        <td>Instalasi Air Panas</td>
+						        <td></td>
+						        <td>Listrik</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2 style="vertical-align: middle;">Tangki Air</td>
+						        <td>Roof Water Tank</td>
+						        <td>500 lt Penguin + Sensor</td>
+						      </tr>
+						       <tr>
+						        <td>Ground Water Tank</td>
+						        <td>1000 lt Panca Wira</td>
+						      </tr>
+						      <tr>
+						        <td>Pompa Air</td>
+						        <td>Transfer GWT ke RTW</td>
+						        <td>Shimizu</td>
+						      </tr>
+						      <tr>
+						        <td>Spetic Tank</td>
+						        <td></td>
+						        <td>Bio Tank 1000 Liter Panca Wira</td>
+						      </tr>
+						    </tbody>
+						</table>
+		    		</div>
+		      	</div>
+		    </div>
+		    <div id="menu2" class="tab-pane fade">
+		      	<br>
+		    	<div class="row">
+		    		<div class="col-sm-12 col-md-5 col-md-offset-1">
+		    			<img class="img-responsive" src="{{ asset('assets/img/Type-C.jpg') }}">
+		    		</div>
+		    		<div class="col-sm-12 col-md-5">
+		    			<h3 class="sub-unit">Type C</h3>		    			
+			      	<h4>
+			      		Rumah 2 Lantai
+			      	</h4>
+			      	<h4>
+			      		Luas Tanah 90m<sup>2</sup>
+			      	</h4>
+			      	<h4>
+			      		2 Bedroom, 2 Bathroom
+			      	</h4>
+		    		</div>
+		      	</div>
+		      	<br>
+		      	<div class="row">
+		      		<hr class="col-md-8 col-md-offset-2">
+		      	</div>
+		      	<br>
+		      	<div class="row">
+		      		<h3>Denah Bangunan</h3>
+		    		<div class="col-md-3 col-md-offset-3">
+		    			<img class="img-responsive" src="{{ asset('assets/img/DENAH-LT-1-TYPE-C-1.jpg') }}">
+		    			<center><p>Lantai 1</p></center>
+		    		</div>
+		    		<div class="col-md-3">
+		    			<img class="img-responsive" src="{{ asset('assets/img/DENAH-LT-2-TYPE-C-1.jpg') }}">
+		    			<center><p>Lantai 2</p></center>
+		    		</div>
+		      	</div>
+		      	<div class="row">
+		      		<hr class="col-md-8 col-md-offset-2">
+		      	</div>
+		      	<br>
+		      	<div class="row">
+		      		<h3>Spesifikasi Bangunan</h3>
+		    		<div class="col-md-8 col-md-offset-2">
+		    			<table class="table table-striped">
+		    				<thead>
+						      <tr>
+						        <th>Jenis</th>
+						        <th>Lokasi Pemasangan</th>
+						        <th>Keterangan</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      <tr>
+						        <td>Pondasi</td>
+						        <td>Dasar Bangunan</td>
+						        <td>Strauss Pile & Beton Bertulang dan Pondasi Batu Kali</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">Dinding</td>
+						        <td>Keliling Bangunan</td>
+						        <td>Pasangan Bata Merah + System Dry Mortar</td>
+						      </tr>
+						      <tr>
+						        <td>Balkon</td>
+						        <td>Kaca Tempered 10 mm + Hand Railing Stainless</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">Facade</td>
+						        <td>Dinding Depan Rumah</td>
+						        <td>Batu Hias Paras Jogja 20 x 40 x 2,5 cm,</td>
+						      </tr>
+						      <tr>
+						        <td>Dinding Belakang</td>
+						        <td>Tangga Monyet Besi siku 50 x 50 x 5</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="3" style="vertical-align: middle;">Finishing Cat</td>
+						        <td>Interior</td>
+						        <td>Kansai - Jepang</td>
+						      </tr>
+						      <tr>
+						        <td>Eksterior</td>
+						        <td>Kansai Weather Shield - Jepang</td>
+						      </tr>
+						      <tr>
+						        <td>Plafond</td>
+						        <td>Kansai - Jepang</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="6" style="vertical-align: middle;">Finishing Lantai</td>
+						        <td>Lantai Dasar dan Car Port</td>
+						        <td>Cor Beton</td>
+						      </tr>
+						      <tr>
+						        <td>Teras Depan</td>
+						        <td>Granit Tile Sandi Mas 60x60</td>
+						      </tr>
+						      <tr>
+						        <td>R.Tamu, R. Makan, R.Dapur</td>
+						        <td>Granit Tile Sandi Mas 60x60</td>
+						      </tr>
+						      <tr>
+						        <td>R. Tidur Lt.2</td>
+						        <td>Granit Tile Sandi Mas 60x60</td>
+						      </tr>
+						      <tr>
+						        <td>Tangga</td>
+						        <td>Step Nising, Granit Tile Sandi Mas 60x60</td>
+						      </tr>
+						      <tr>
+						        <td>Teras Belakang</td>
+						        <td>Granit Tile 10x30 Roman</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">R.Mandi/WC</td>
+						        <td>R.Mandi</td>
+						        <td>Granite tile 10x30 Roman</td>
+						      </tr>
+						      <tr>
+						        <td>Dinding R. Mandi</td>
+						        <td>Granite tile 10x30 Roman</td>
+						      </tr>
+						      <tr>
+						        <td>Carport</td>
+						        <td>Lantai 1</td>
+						        <td>Ceramic Tile 40 x 40 Sandimas</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">Struktur Atas</td>
+						        <td>Lantai 2</td>
+						        <td>Beton K300 + Besi Beton</td>
+						      </tr>
+						      <tr>
+						        <td>Tangki Air</td>
+						      	<td>Beton K300 + Besi Beton</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="6" style="vertical-align: middle;">Atap</td>
+						        <td>Rangka Atap</td>
+						        <td>Beton K300 + Rangka Besi + Besi Beton</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="5" style="vertical-align: middle;">Atap</td>
+						        <td>Beton K300 + Besi Beton + Water Proof</td>
+						      </tr>
+						      <tr><td>Fosroc/Silka</td></tr>
+						      <tr><td>Glass Wool T.50 mm</td></tr>
+						      <tr><td>Alumunium Foil</td></tr>
+						      <tr><td>Kawat Galvanis</td></tr>
+						      <tr>
+						        <td rowspan="3" style="vertical-align: middle;">Plafond</td>
+						        <td>R. Dalam</td>
+						        <td>Gypsum 9 mm Jayaboard, rangka Hollow Galvanis + List</td>
+						      </tr>
+						      <tr>
+						      	<td>R.Toilet</td>
+						      	<td>Kaisi Board 6 mm + List</td>
+						      </tr>
+						      <tr>
+						      	<td>Teras dan Balkon</td>
+						      	<td>Conwood + List</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2" style="vertical-align: middle;">Kusen</td>
+						        <td>Pintu Eksterior + Sliding</td>
+						        <td>Alumunium YKK Fility kaca 5 mm Asahimas</td>
+						      </tr>
+						      <tr>
+						        <td>Jendela Eksterior + Sliding</td>
+						        <td>Alumunium YKK Fility kaca 5 mm Asahimas</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="5" style="vertical-align: middle;">Pintu dan Jendela</td>
+						        <td>Pintu Interior</td>
+						        <td>Daiken</td>
+						      </tr>
+						      <tr>
+						        <td>Pintu Utama</td>
+						        <td>Daiken</td>
+						      </tr>
+						      <tr>
+						        <td>Pintu Kamar</td>
+						        <td>Daiken</td>
+						      </tr>
+						      <tr>
+						        <td>Pintu R.Mandi/ WC</td>
+						        <td>UPVC</td>
+						      </tr>
+						      <tr>
+						        <td>Jendela Sliding</td>
+						        <td>Alumunium YKK Fility kaca 5 mm Asahimas</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="8" style="vertical-align: middle;">Sanitary</td>
+						        <td rowspan="4" style="vertical-align: middle;">R.Mandi Lt.1</td>
+						        <td>Closet Duduk TOTO</td>
+						      </tr>
+						      <tr><td>Jet Washer + Shower Set TOTO</td></tr>
+						      <tr><td>Tissue Holder, Wastafel TOTO</td></tr>
+						      <tr><td>Kran TOTO</td></tr>
+						      <tr>
+						       
+						        <td rowspan="4" style="vertical-align: middle;">R.Mandi Lt.2</td>
+						        <td>Closet Duduk TOTO</td>
+						      </tr>
+						      <tr><td>Jet Washer + Shower Set TOTO</td></tr>
+						      <tr><td>Tissue Holder, Wastafel TOTO</td></tr>
+						      <tr><td>Kran TOTO</td></tr>
+						      <tr>
+						        <td>Kitchen Sink</td>
+						        <td></td>
+						        <td>Royal + Krand Sink TOTO</td>
+						      </tr>
+						      <tr>
+						        <td>Listrik</td>
+						        <td></td>
+						        <td>2200VA</td>
+						      </tr>
+						      <tr>
+						        <td>Air Conditioning</td>
+						        <td></td>
+						        <td>Daikin 1 Pk, Inverter</td>
+						      </tr>
+						      <tr>
+						        <td>Exhaust Fan</td>
+						        <td></td>
+						        <td>KDK</td>
+						      </tr>
+						      <tr>
+						        <td>Lightning</td>
+						        <td></td>
+						        <td>Panasonic</td>
+						      </tr>
+						      <tr>
+						        <td>Outlet</td>
+						        <td></td>
+						        <td>Telp, MATV</td>
+						      </tr>
+						      <tr>
+						        <td>Instalasi Air Panas</td>
+						        <td></td>
+						        <td>Listrik</td>
+						      </tr>
+						      <tr>
+						        <td rowspan="2 style="vertical-align: middle;">Tangki Air</td>
+						        <td>Roof Water Tank</td>
+						        <td>500 lt Penguin + Sensor</td>
+						      </tr>
+						       <tr>
+						        <td>Ground Water Tank</td>
+						        <td>1000 lt Panca Wira</td>
+						      </tr>
+						      <tr>
+						        <td>Pompa Air</td>
+						        <td>Transfer GWT ke RTW</td>
+						        <td>Shimizu</td>
+						      </tr>
+						      <tr>
+						        <td>Spetic Tank</td>
+						        <td></td>
+						        <td>Bio Tank 1000 Liter Panca Wira</td>
+						      </tr>
+						    </tbody>
+						</table>
+		    		</div>
+		      	</div>
+		    </div>
+		</div>    
+	</div>
+
+{% endblock body %}

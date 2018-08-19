@@ -1,0 +1,171 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="{{path('index')}}">Beranda</a></li>
+			<li>Tentang Kami</li>        
+		</ol>
+	</div>
+	<section class="sub-title">
+      <div class="container">
+		<div class="row">
+	          <div class="col-md-5 col-xs-12">
+	            <h2>Tentang Kami</h2>
+	          </div>
+	     </div>
+       </div>
+	</section>
+	<div class="container">
+
+    	<ul class="nav nav-tabs">
+		    <li class="active"><a data-toggle="tab" href="#home">Green Bamboo Tajur</a></li>
+		    <li><a data-toggle="tab" href="#menu1">Developer</a></li>
+		</ul>
+
+		 <div class="tab-content">
+		    <div id="home" class="tab-pane fade in active">
+		    	<div class="row">
+		    		<div class="col-lg-8 col-lg-offset-2">
+		    			<h2 class="wow fadeInDown" style="text-align: center; visibility: hidden;" data-wow-duration="1.5s">LINGKUNGAN TINGGAL YANG SEHAT</h2>
+		    		</div>
+		    		<div class="col-lg-8 col-lg-offset-2">
+		    			<br>
+		    			<img class="img-responsive" src="{{ asset('assets/img/header.jpg') }}">
+		    			<p>
+				      		Green Bamboo Terrace adalah sebuah kawasan hunian seluas 1,6 ha yang nyaman untuk gaya hidup sehat.
+							Berlokasi di wilayah Tajur Bogor menjadikan Green Bamboo Terrace memiliki nilai investasi yang menguntungkan dengan aksesbilitas yang prima.
+
+			      		
+				      	</p>
+		    			<img class="img-responsive" src="{{ asset('assets/img/siteplan.jpg') }}">
+		    			<p>
+				      		Green Bamboo Terrace dirancang dengan kualitas material bangunan yang berkualitas dengan lingkungan asri alam sekitarnya. Mendefinisikan kembali arti hunian yang berpadu dengan ketenangan alam hingga tercipta hunian yang ramah lingkungan.
+						</p>
+						<p>
+							Semua sistem utilitas ditanam dibawah tanah, mempertegas konsep modern sebuah kawasan hunian namun juga lebih aman dan ramah lingkungan.				      		
+				      	</p>
+		    		</div>
+		    		<div class="col-lg-8 col-lg-offset-2">
+		    		</div>
+		      	</div>
+
+		      	<div class="row">
+    			<div class="col-md-12">
+		    		<div class="row">
+		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+		    				<center>
+			    				<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/AirKeran.png') }}">
+			    				<p class="lead" style="text-align: center;">Air Bisa langsung diminum dari Kran</p>
+			    			</center>
+		    			</div>
+		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+		    				<center>
+		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/cctv.png') }}">
+		    					<p class="lead" style="text-align: center;">Security CCTV System 24 Jam</p>
+		    				</center>
+		    			</div>
+		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+		    				<center>
+		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Gate.png') }}">
+		    					<p class="lead" style="text-align: center;">Gerbang keluar masuk terkontrol</p>
+		    				</center>
+		    			</div>
+		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+		    				<center>
+		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/GreenHome.png') }}">
+		    					<p class="lead" style="text-align: center;">Rumah dengan Konsep sehat dan hijau
+		    				</center>
+		    			</div>
+		    		</div>
+		    		<div class="row">
+		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+		    				<center>
+		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Location.png') }}">
+		    					<p class="lead" style="text-align: center;">Lokasi Strategis di Kota Bogor</p>
+		    				</center>
+		    			</div>
+		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+		    				<center>
+		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/material.png') }}">
+		    					<p class="lead" style="text-align: center;">Material menggunakan bahan nomer 1</p>
+		    				</center>
+		    			</div>
+		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+		    				<center>
+		    					<img class="img-circle" style="max-width: 75%;" src="{{ asset('assets/img/amenities/Playground.png') }}">
+		    					<p class="lead" style="text-align: center;">Lingkungan yang ramah bagi anak</p>
+		    				</center>
+		    			</div>
+		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+		    				<center>
+		    					<img class="img-circle" style="max-width: 75%;" src="{{ asset('assets/img/amenities/Sertifikat.png') }}">
+		    					<p class="lead" style="text-align: center;">SHM sudah Per Rumah</p>
+		    				</center>
+		    			</div>
+		    		</div>
+		    	</div>
+	    	</div>
+		    </div>
+		    <div id="menu1" class="tab-pane fade">
+		      <div class="row">
+			    	<div class="col-lg-8 col-lg-offset-2 wow fadeInDown" data-wow-duration="1.5s" style="visibility: hidden">
+				        <center>
+				        	<img src="{{ asset('assets/img/kbj.png') }}" class="img-responsive">
+				        </center>
+				    </div>
+				    <div class="col-lg-8 col-lg-offset-2">
+				    	<h2>Kebun Bambu Jakarta</h2>
+				    	<p>
+				      	PT.Kebun Bambu Jakarta memiliki beberapa apartemen dan ruang kantor di Indonesia. Kami menyewakan properti kami ke perusahan asing dan tenaga kerja asing, terutama untuk perusahaan Jepang dan tenaga kerja asing dari Jepang.
+					      </p>
+					      <p>
+						Kami berusaha sebaik mungkin untuk dapat memberikan fasilitas terbaik kepada mereka.
+						Membuat mereka hidup lebih nyaman dan tenang di Indonesia. Staf kami yang bisa berbahasa Jepang dan Inggris akan selalu memberikan pelayanan terbaik.
+						</p>
+				    </div>
+				</div>
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 wow fadeInDown" data-wow-duration="1.5s" style="visibility: hidden">
+				        <h2>Vision and Mission</h2>
+				    </div> 
+				    <div class="col-lg-4 col-lg-offset-2" style="text-align: center">
+				      	<p class="lead">
+				      		Kemanusiaan
+				      	</p>
+				      	<p>
+				      		Kami membuat tempat kerja yang nyaman untuk membuat karyawan lebih bersemangat dan produktif.
+				      	</p>
+				    </div>
+				    <div class="col-lg-4" style="text-align: center">
+				      	<p class="lead">
+				      		Produk dan Servis
+				      	</p>
+				      	<p>
+				      		Selalu menyediakan produk dan servis yang berkualitas tinggi untuk semua orang.
+				      	</p>
+				    </div>
+				    <div class="col-lg-4 col-lg-offset-2" style="text-align: center">
+				      	<p class="lead">
+				      		Inovasi
+				      	</p>
+				      	<p>
+				      		Kami akan terus berkembang dan tetap berinnovasi agar selalu memberikan performa dan servis terbaik kami di masyarakat.
+				      	</p>
+				    </div>
+				    <div class="col-lg-4" style="text-align: center">
+				      	<p class="lead">
+				      		Penyesuaian
+				      	</p>
+				      	<p>
+				      		Mematuhi hukum dan peraturan pemerintah yang berlaku merupakan prioritas utama dalam melakukan setiap kegiatan bisnis kami.
+				      	</p>
+				    </div>
+			    </div>
+		    </div>
+		</div>    
+	</div>
+
+{% endblock body %}
+

@@ -1,11 +1,18 @@
 index:
    path: /
-   controller: App\Controller\DefaultController::index
-
+   controller: App\Controller\DefaultController::index   
+project:
+    path: /project
+    controller: App\Controller\DefaultController::project
+about:
+    path: /about
+    defaults: { _controller: App\Controller\DefaultController::about }
 send_inquiry:
     path: /send-inquiry
     defaults: { _controller: App\Controller\DefaultController::sendInquiry }
-
-send_email:
-    path: /send-email
-    defaults: { _controller: App\Controller\DefaultController::sendEmail }
+contact:
+    path: /contact
+    defaults: { _controller: App\Controller\DefaultController::contact }
+news:
+    path: /berita
+    defaults: { _controller: App\Controller\DefaultController::news }

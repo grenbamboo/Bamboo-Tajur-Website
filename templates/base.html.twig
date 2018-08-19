@@ -44,40 +44,40 @@
     </head>
     <body>
 		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-				 	<button type="button" class="navbar-toggle collapsed" onclick="openNav()">
-					  <span class="sr-only">Toggle navigation</span>
-					  <span class="icon-bar"></span>
-					  <span class="icon-bar"></span>
-					  <span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.php"><img class="img-responsive" src="{{ asset('assets/img/logo.png') }}" alt="Lifull"></a>
-				</div>
-				<div class="collapse navbar-collapse navbar-nav navbar-right" id="bs-example-navbar-collapse-1">
-				    <ul class="nav navbar-nav" aria-labelledby="dropdownMenuDivider">
-				        <li><a href="">TENTANG KAMI</a></li>
-					    <li><a href="">UNIT</a>       
-					    <li><a href="">BERITA</a></li>
-					    <li><a href="">KONTAK</a></li>
-				    </ul>
-				    
-			    </div>
-			</div>
-		</nav>
+		 <div class="container">
+		    <div class="navbar-header">
+		    
+		    <button type="button" class="navbar-toggle collapsed" onclick="openNav()">
+		      <span class="sr-only">Toggle navigation</span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		    </button>
+		    <a class="navbar-brand" href="index.php"><img class="img-responsive" src="{{ asset('assets/img/logo.png') }}" alt="Bamboo Tajur"></a>
+		    </div>
+		    <div class="collapse navbar-collapse navbar-nav navbar-right" id="bs-example-navbar-collapse-1">
+			    <ul class="nav navbar-nav">
+			        <li><a href="{{path('about')}}">TENTANG KAMI</a></li>
+			        <li><a href="{{path('project')}}">UNIT</a></li>
+			        <li><a href="{{path('news')}}">BERITA</a></li>
+			        <li><a href="{{path('contact')}}">KONTAK</a></li>
+			    </ul>
+		    </div>
+		</div>
+	</nav>
 
 		<div id="mobileNav" class="mobileMenu">
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="">&times;</a>
 		  <div class="mobileMenu-content">
 				<ul class="nav navbar-nav">
-					<li><a href="">TENTANG KAMI</a></li>
+					<li><a href="{{path('about')}}">TENTANG KAMI</a></li>
 					<!-- <li class="visible-sm visible-xs"><a href="2.service.php">ERVICE</a></li> -->
 					<li>
-					  <a href="" aria-haspopup="true">UNIT</a>
+					  <a href="{{path('project')}}" aria-haspopup="true">UNIT</a>
 					</li>
 					
-					<li><a href="">BERITA</a></li>
-					<li><a href="">KONTAK</a></li>
+					<li><a href="{{path('news')}}">BERITA</a></li>
+					<li><a href="{{path('contact')}}">KONTAK</a></li>
 				</ul>
 				
 		  </div>
@@ -97,25 +97,49 @@
 			<div class="container">
 				<div class="row hidden-sm hidden-xs">
 					<div class="col-md-6">
-						<a href="#"><img class="img-responsive lifull" src="{{ asset('assets/img/logo.png') }}" alt="Green Bamboo Tajur"></a>
+						<a href="#"><img class="img-responsive" src="{{ asset('assets/img/logo.png') }}" alt="Green Bamboo Tajur" style="margin-top: -50px;"></a>
 					</div>
 					<div class="col-md-6">
 						<ul class="list-inline pull-right">
-						  <li class="list-inline-item"><a href="">Terms of Use</a></li>
-						  <li class="list-inline-item"><a href="">Privacy Policy</a></li>
-						  <li class="list-inline-item"><a href="">Sitemap</a></li>
+							<li class="list-inline-item">
+								<a href="https://www.facebook.com/GreenBambooTerrace" target="_blank">
+									<i class="fa fa-facebook-square" aria-hidden="true" style="font-size: 27px;"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://www.instagram.com/bambootajur" target="_blank">
+									<i class="fa fa-instagram" aria-hidden="true" style="font-size: 27px;"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://twitter.com/BambooTajur" target="_blank">
+									<i class="fa fa-twitter" aria-hidden="true" style="font-size: 27px;"></i>
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="row visible-sm visible-xs">
 					<div class="col-md-6">
-						<a href="#"><img class="img-responsive lifull" src="{{ asset('assets/img/logo.png') }}" alt="Green Bamboo Tajur"></a>
+						<a href="#"><img class="img-responsive" src="{{ asset('assets/img/logo.png') }}" alt="Green Bamboo Tajur"></a>
 					</div>
 					<div class="col-md-6">
 						<ul class="list-inline text-center">
-						  <li class="list-inline-item"><a href="">Terms of Use</a></li>
-						  <li class="list-inline-item"><a href="">Privacy Policy</a></li>
-						  <li class="list-inline-item"><a href="">Sitemap</a></li>
+						  <li class="list-inline-item">
+							<a href="https://www.facebook.com/GreenBambooTerrace" target="_blank">
+									<i class="fa fa-facebook-square" aria-hidden="true" style="font-size: 27px;"></i>
+								</a>
+						  </li>
+						  <li class="list-inline-item">
+							<a href="https://twitter.com/BambooTajur" target="_blank">
+									<i class="fa fa-instagram" aria-hidden="true" style="font-size: 27px;"></i>
+								</a>
+						  </li>
+						  <li class="list-inline-item">
+							<a href="https://www.instagram.com/bambootajur" target="_blank">
+									<i class="fa fa-twitter" aria-hidden="true" style="font-size: 27px;"></i>
+								</a>
+						  </li>
 						</ul>
 					</div>
 				</div>

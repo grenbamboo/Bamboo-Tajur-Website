@@ -30,7 +30,7 @@
 body{
 	font-family: 'Montserrat';
 	padding: 20px;
-  background-color: #fffcf0;
+  background-color: #fafafa;
 }
 
 
@@ -103,11 +103,12 @@ h4{
 }
 
 .breadcrumb{
+  margin-top: 30px;
   margin-bottom: 0px;
   padding-left: 0px;
   font-weight: 700;
   font-size: 11px;
-   background-color: #fffcf0;
+   background-color: #fafafa;
 }
 
 .breadcrumb li a{
@@ -190,25 +191,26 @@ h4{
 }
 .navbar{
 	padding: 20px;
-	background-color: #fff6d3;
+	background-color: #f5f5f5;
    border-bottom: 3px solid #008a72;
 }
 .navbar .container{
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .navbar .navbar-brand{
 	display: block;
   max-width:210px;
   position: relative;
-  margin-top: -12px;
+  margin-top: -36px;
   margin-left: 8px;
   margin-right: 20px;
 }
 
 .navbar .navbar-nav li a{
   color: #333;
+  font-weight: 900;
 }
 
 
@@ -273,10 +275,12 @@ h4{
     color: #008a72;
     font-weight: 700;
 }
-
+.panel{background-color: transparent;}
 .panel-default>.panel-heading{
-  background-color: white;
+  background-color: transparent;
 }
+
+td{border: 1px solid #ddd;}
 
 .panel-heading a{
   font-size: 24px;
@@ -704,6 +708,10 @@ footer p{
   margin-bottom: 100px;
 }
 
+.sub-unit{
+  text-align: left;
+}
+
 @media (max-width:995px){
       .container{
       margin-top: 40px;
@@ -727,13 +735,14 @@ footer p{
     }
     h4{
       font-size: 25px;
+      text-align: center;
     }
     .navbar{
       padding:10px;
     }
     .breadcrumb{
       margin-bottom: 10px;
-      margin-top: 20px;
+      margin-top: 50px;
     }
 
     footer{
@@ -806,6 +815,9 @@ footer p{
     #sub-header-produk h1, #sub-header-produk .logo-service, #sub-header-produk .btn{
       margin-left: 20px;
     }
+     .sub-unit{
+      text-align: center;
+    }
     /*#map-content{
       height: 300px;
       margin-top: 60px;
@@ -845,6 +857,7 @@ footer p{
         padding-top: 10px;
         padding-bottom: 10px;
     }
+   
 }
 
 @media (max-width:779px){
@@ -921,4 +934,16 @@ footer p{
     right: 30px;
     }
 
+}
+.loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff url("../img/loading.gif") no-repeat center center;
+  opacity: .75;
+  filter: alpha(opacity=75);
+  z-index: 20140628;
 }
