@@ -275,6 +275,24 @@ h4{
     color: #008a72;
     font-weight: 700;
 }
+
+#sticky-phone, #sticky-phone-index {
+    position: fixed;
+    bottom: 15px;
+    right: 0px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    border-radius: 75px 0 0 75px;
+    display: none;
+}
+
+#sticky-phone .btn, #sticky-phone-index .btn {
+    padding: 8px 12px;
+    border-radius: 30px;
+}
+
+
 .panel{background-color: transparent;}
 .panel-default>.panel-heading{
   background-color: transparent;
