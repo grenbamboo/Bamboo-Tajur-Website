@@ -1,7 +1,96 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<style type="text/css">
 
+#myImg1,#myImg2,#myImg3,#myImg4,
+#myImg5,#myImg6,#myImg7,#myImg8 {
+    
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*#myImg1,#myImg2,#myImg3,#myImg4,
+#myImg5,#myImg6,#myImg7,#myImg8:hover {opacity: 0.7;}*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100000000000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 30%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+</style>
 	<div class="container">
 		<ol class="breadcrumb">
 			<li><a href="{{path('index')}}">Beranda</a></li>
@@ -21,7 +110,7 @@
 
     	<ul class="nav nav-tabs">
 		    <li class="active"><a data-toggle="tab" href="#home">Green Bamboo Tajur</a></li>
-		    <li><a data-toggle="tab" href="#menu1">Developer</a></li>
+		    <li><a data-toggle="tab" href="#menu1">Fasilitas</a></li>
 		</ul>
 
 		 <div class="tab-content">
@@ -34,20 +123,19 @@
 		    			<br>
 		    			<img class="img-responsive" src="{{ asset('assets/img/header.jpg') }}">
 		    			<p>
-				      		Green Bamboo Terrace adalah sebuah kawasan hunian seluas 1,6 ha yang nyaman untuk gaya hidup sehat.
-							Berlokasi di wilayah Tajur Bogor menjadikan Green Bamboo Terrace memiliki nilai investasi yang menguntungkan dengan aksesbilitas yang prima.
+				      		Green Bamboo Terrace adalah sebuah kawasan hunian seluas 1,7 ha dengan lingkungan yang hijau dan nyaman. Berlokasi di wilayah Tajur – Kota Bogor menjadikan Green Bamboo Terrace memiliki nilai investasi yang menguntungkan dengan  aksesibilitas yang strategis.
 
 			      		
 				      	</p>
 		    			<img class="img-responsive" src="{{ asset('assets/img/siteplan.jpg') }}">
 		    			<p>
-				      		Green Bamboo Terrace dirancang dengan kualitas material bangunan yang berkualitas dengan lingkungan asri alam sekitarnya. Mendefinisikan kembali arti hunian yang berpadu dengan ketenangan alam hingga tercipta hunian yang ramah lingkungan.
+				      		Green Bamboo Terrace dirancang dengan menggunakan material bangunan kualitas terbaik yang menyatu dengan lingkungan asri alam sekitarnya. Mendefinisikan kembali arti hunian yang berpadu dengan ketenangan alam hingga tercipta hunian yang ramah lingkungan.
 						</p>
 						<p>
 							Semua sistem utilitas ditanam dibawah tanah, mempertegas konsep modern sebuah kawasan hunian namun juga lebih aman dan ramah lingkungan.				      		
 				      	</p>
 		    		</div>
-		    		<div class="col-lg-4 col-lg-offset-2">		    			
+		    		<!-- <div class="col-lg-4 col-lg-offset-2">		    			
 						<p class="lead" >Tol</p>
 							<ul>
 								<li><p>Akses Tol Jagorawi  9 menit.</p></li>
@@ -87,69 +175,88 @@
 						<ul>
 							<li><p>SPBU Pertamina 1 menit.</p></li>
 						</ul>
-		    		</div>
+		    		</div> -->
 		      	</div>
 		      	<br><br>
 		      	<div class="row">
-    			<div class="col-md-12">
-		    		<div class="row">
-		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
-		    				<center>
-			    				<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/AirKeran.png') }}">
-			    				<p class="lead" style="text-align: center;">Air Bisa langsung diminum dari Kran</p>
-			    			</center>
-		    			</div>
-		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
-		    				<center>
-		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/cctv.png') }}">
-		    					<p class="lead" style="text-align: center;">Security CCTV System 24 Jam</p>
-		    				</center>
-		    			</div>
-		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
-		    				<center>
-		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Gate.png') }}">
-		    					<p class="lead" style="text-align: center;">Gerbang keluar masuk terkontrol</p>
-		    				</center>
-		    			</div>
-		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
-		    				<center>
-		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/GreenHome.png') }}">
-		    					<p class="lead" style="text-align: center;">Rumah dengan Konsep sehat dan hijau
-		    				</center>
-		    			</div>
-		    		</div>
-		    		<div class="row">
-		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
-		    				<center>
-		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Location.png') }}">
-		    					<p class="lead" style="text-align: center;">Lokasi Strategis di Kota Bogor</p>
-		    				</center>
-		    			</div>
-		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
-		    				<center>
-		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/material.png') }}">
-		    					<p class="lead" style="text-align: center;">Material menggunakan bahan nomer 1</p>
-		    				</center>
-		    			</div>
-		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
-		    				<center>
-		    					<img class="img-circle" style="max-width: 75%;" src="{{ asset('assets/img/amenities/Playground.png') }}">
-		    					<p class="lead" style="text-align: center;">Lingkungan yang ramah bagi anak</p>
-		    				</center>
-		    			</div>
-		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
-		    				<center>
-		    					<img class="img-circle" style="max-width: 75%;" src="{{ asset('assets/img/amenities/Sertifikat.png') }}">
-		    					<p class="lead" style="text-align: center;">SHM sudah Per Rumah</p>
-		    				</center>
-		    			</div>
-		    		</div>
+		      		
+	    			<!-- <div class="col-md-12">
+			    		<div class="row">
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+				    				<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/AirKeran.png') }}">
+				    				<p class="lead" style="text-align: center;">Air Bisa langsung diminum dari Kran</p>
+				    			</center>
+			    			</div>
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+			    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/cctv.png') }}">
+			    					<p class="lead" style="text-align: center;">Security CCTV System 24 Jam</p>
+			    				</center>
+			    			</div>
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+			    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Gate.png') }}">
+			    					<p class="lead" style="text-align: center;">Gerbang keluar masuk terkontrol</p>
+			    				</center>
+			    			</div>
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+			    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/GreenHome.png') }}">
+			    					<p class="lead" style="text-align: center;">Rumah dengan Konsep sehat dan hijau
+			    				</center>
+			    			</div>
+			    		</div>
+			    		<div class="row">
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+			    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Location.png') }}">
+			    					<p class="lead" style="text-align: center;">Lokasi Strategis di Kota Bogor</p>
+			    				</center>
+			    			</div>
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+			    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/material.png') }}">
+			    					<p class="lead" style="text-align: center;">Material menggunakan bahan nomer 1</p>
+			    				</center>
+			    			</div>
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+			    					<img class="img-circle" style="max-width: 75%;" src="{{ asset('assets/img/amenities/Playground.png') }}">
+			    					<p class="lead" style="text-align: center;">Lingkungan yang ramah bagi anak</p>
+			    				</center>
+			    			</div>
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+			    					<img class="img-circle" style="max-width: 75%;" src="{{ asset('assets/img/amenities/Sertifikat.png') }}">
+			    					<p class="lead" style="text-align: center;">SHM sudah Per Rumah</p>
+			    				</center>
+			    			</div>
+			    		</div>
+			    	</div> -->
 		    	</div>
-	    	</div>
 		    </div>
 		    <div id="menu1" class="tab-pane fade">
 		      <div class="row">
-			    	<div class="col-lg-8 col-lg-offset-2 wow fadeInDown" data-wow-duration="1.5s" style="visibility: hidden">
+		      		<div class="col-md-4">
+		      			<center>
+		    				<img class="img-responsive" src="{{ asset('assets/img/Interior1.jpg') }}">
+		    				<p class="lead" style="text-align: center;">Interior 1</p>
+		    			</center>
+		      		</div>
+		      		<div class="col-md-4">
+		      			<center>
+		    				<img class="img-responsive" src="{{ asset('assets/img/Interior2.jpg') }}">
+		    				<p class="lead" style="text-align: center;">Interior 2</p>
+		    			</center>
+		      		</div>
+		      		<div class="col-md-4">
+		      			<center>
+		    				<img class="img-responsive" src="{{ asset('assets/img/Interior3.jpg') }}">
+		    				<p class="lead" style="text-align: center;">Interior 3</p>
+		    			</center>
+		      		</div>
+			    	<!-- <div class="col-lg-8 col-lg-offset-2 wow fadeInDown" data-wow-duration="1.5s" style="visibility: hidden">
 				        <center>
 				        	<img src="{{ asset('assets/img/kbj.png') }}" class="img-responsive">
 				        </center>
@@ -162,10 +269,94 @@
 					      <p>
 						Kami berusaha sebaik mungkin memberikan material bangunan terbaik untuk proyek perumahan "Green Bamboo Terrace" agar kualitas hidup menjadi lebih nyaman dan tenang.
 						</p>
+				    </div> -->
+				    <div class="col-lg-8 col-lg-offset-2">
+				    	<img class="img-responsive" src="{{ asset('assets/img/siteplan.jpg') }}">
+		    			<p>
+				      		Green Bamboo Terrace dirancang dengan menggunakan material bangunan kualitas terbaik yang menyatu dengan lingkungan asri alam sekitarnya. Mendefinisikan kembali arti hunian yang berpadu dengan ketenangan alam hingga tercipta hunian yang ramah lingkungan.
+						</p>
+						<p>
+							Semua sistem utilitas ditanam dibawah tanah, mempertegas konsep modern sebuah kawasan hunian namun juga lebih aman dan ramah lingkungan.				      		
+				      	</p>
 				    </div>
+				    <div class="col-lg-4 col-lg-offset-2">		    			
+						<p class="lead" >Fasilitas Dalam</p>
+						<ul>
+							<li><p>Air dapat langsung diminum.</p></li>
+							<li><p>Security & CCTV.</p></li>
+							<li><p>Barbeque area & taman keluarga.</p></li>
+							<li><p>Cluster System.</p></li>
+							<li><p>Konsep & bahan kualitas terbaik.</p></li>
+							<li><p>AC Mitsubishi.</p></li>
+						</ul>
+					</div>
+					<div class="col-lg-4">
+						<p class="lead">Fasilitas Luar</p>
+						<ul>
+							<li><p>Akses mudah menuju toll .</p></li>
+							<li><p>Hanya 1 menit ke pusat perbelanjaan Ramayana Tajur.</p></li>
+							<li><p>Hanya 3 menit menuju rumah sakit terdekat.</p></li>
+							<li><p>Dekat dengan Sekolah atau Universitas.</p></li>
+							<li><p>Transportasi umum 24 Jam.</p></li>
+						</ul>
+		    		</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2 wow fadeInDown" data-wow-duration="1.5s" style="visibility: hidden">
+					<div class="col-md-12">
+			    		<div class="row">
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+				    				<img class="img-circle" id="myImg1" alt="Air Bisa langsung diminum dari Kran" style="max-width: 65%;" src="{{ asset('assets/img/amenities/AirKeran.png') }}">
+				    				<p class="lead" style="text-align: center;">Air yang bisa langsung diminum tanpa Aqua galon</p>
+				    			</center>
+			    			</div>
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+			    					<img class="img-circle" id="myImg2" alt="Security CCTV System 24 Jam" style="max-width: 65%;" src="{{ asset('assets/img/amenities/cctv.png') }}">
+			    					<p class="lead" style="text-align: center;">Security CCTV system 24 jam</p>
+			    				</center>
+			    			</div>
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+			    					<img class="img-circle" id="myImg3" alt="Gerbang keluar masuk terkontrol" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Gate.png') }}">
+			    					<p class="lead" style="text-align: center;">Gerbang keluar masuk terkontrol</p>
+			    				</center>
+			    			</div>
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+			    					<img class="img-circle" id="myImg4" alt="Rumah dengan Konsep sehat dan hijau" style="max-width: 65%;" src="{{ asset('assets/img/amenities/GreenHome.png') }}">
+			    					<p class="lead" style="text-align: center;">Rumah dengan konsep sehat dan hijau</p>
+			    				</center>
+			    			</div>
+			    		</div>
+			    		<div class="row">
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+			    					<img class="img-circle" id="myImg5" alt="Lokasi Strategis di Kota Bogor" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Location.png') }}">
+			    					<p class="lead" style="text-align: center;">Lokasi strategis di Kota Bogor</p>
+			    				</center>
+			    			</div>
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+			    					<img class="img-circle" id="myImg6" alt="Material menggunakan bahan nomer 1" style="max-width: 65%;" src="{{ asset('assets/img/amenities/material.png') }}">
+			    					<p class="lead" style="text-align: center;">Material menggunakan bahan nomer 1</p>
+			    				</center>
+			    			</div>
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+			    					<img class="img-circle" id="myImg7" alt="Lingkungan yang ramah bagi anak" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Playground.png') }}">
+			    					<p class="lead" style="text-align: center;">Lingkungan yang ramah bagi anak</p>
+			    				</center>
+			    			</div>
+			    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
+			    				<center>
+			    					<img class="img-circle" id="myImg8" alt="Ready Stok Unit 8 Bulan" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Sertifikat.png') }}">
+			    					<p class="lead" style="text-align: center;">Ready stok unit 8 bulan</p>
+			    				</center>
+			    			</div>
+			    		</div>
+			    	</div>
+					<!-- <div class="col-lg-8 col-lg-offset-2 wow fadeInDown" data-wow-duration="1.5s" style="visibility: hidden">
 				        <h2>Vision and Mission</h2>
 				    </div> 
 				    <div class="col-lg-4 col-lg-offset-2" style="text-align: center">
@@ -199,11 +390,193 @@
 				      	<p>
 				      		Mematuhi hukum dan peraturan pemerintah yang berlaku merupakan prioritas utama dalam melakukan setiap kegiatan bisnis kami.
 				      	</p>
-				    </div>
+				    </div> -->
 			    </div>
 		    </div>
 		</div>    
 	</div>
-
+	<div id="myModal" class="modal">
+	  <span class="close">&times;</span>
+	  <img class="modal-content" id="img01">
+	  <div id="caption"></div>
+	</div>
 {% endblock body %}
 
+{% block javascripts %}
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg4');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg5');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg6');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg7');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg8');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+{% endblock javascripts %}

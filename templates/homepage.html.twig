@@ -1,6 +1,96 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<style type="text/css">
+
+#myImg1,#myImg2,#myImg3,#myImg4,
+#myImg5,#myImg6,#myImg7,#myImg8 {
+    
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*#myImg1,#myImg2,#myImg3,#myImg4,
+#myImg5,#myImg6,#myImg7,#myImg8:hover {opacity: 0.7;}*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100000000000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 30%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+</style>
 <div class="loading" style="display:none; z-index: 999999999999"></div>
 	<section id="bighead">
 	    <div class="container">
@@ -27,8 +117,10 @@
 		      <div class="col-md-8 col-md-offset-2">
 		      	<h3 class="wow fadeInDown" style="text-align: center;">Cara Natural dalam Hidup</h3>
 		      	<p>
-		      		Green Bamboo Terrace dirancang dengan kualitas material bangunan yang berkualitas dengan lingkungan asri alam sekitarnya.
-					Mendefinisikan kembali arti hunian yang berpadu dengan ketenangan alam hingga tercipta hunian yang ramah lingkungan.
+		      		Green Bamboo Terrace dirancang dengan menggunakan material bangunan kualitas terbaik yang menyatu dengan lingkungan asri alam sekitarnya. Mendefinisikan kembali arti hunian yang berpadu dengan ketenangan alam hingga tercipta hunian yang ramah lingkungan.
+		      	</p>
+		      	<p>
+					Semua sistem utilitas ditanam dibawah tanah, mempertegas konsep modern sebuah kawasan hunian namun juga lebih aman dan ramah lingkungan.				      		
 		      	</p>
 		      	<p>Dengan NUP IDR 5 Juta, refundable! Launching coming soon!</p>
 		      	<hr>
@@ -43,52 +135,52 @@
 		    		<div class="row">
 		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
 		    				<center>
-			    				<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/AirKeran.png') }}">
-			    				<p class="lead" style="text-align: center;">Air Bisa langsung diminum dari Kran</p>
+			    				<img class="img-circle" id="myImg1" alt="Air Bisa langsung diminum dari Kran" style="max-width: 65%;" src="{{ asset('assets/img/amenities/AirKeran.png') }}">
+			    				<p class="lead" style="text-align: center;">Air yang bisa langsung diminum tanpa Aqua galon</p>
 			    			</center>
 		    			</div>
 		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
 		    				<center>
-		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/cctv.png') }}">
-		    					<p class="lead" style="text-align: center;">Security CCTV System 24 Jam</p>
+		    					<img class="img-circle" id="myImg2" alt="Security CCTV System 24 Jam" style="max-width: 65%;" src="{{ asset('assets/img/amenities/cctv.png') }}">
+		    					<p class="lead" style="text-align: center;">Security CCTV system 24 jam</p>
 		    				</center>
 		    			</div>
 		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
 		    				<center>
-		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Gate.png') }}">
+		    					<img class="img-circle" id="myImg3" alt="Gerbang keluar masuk terkontrol" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Gate.png') }}">
 		    					<p class="lead" style="text-align: center;">Gerbang keluar masuk terkontrol</p>
 		    				</center>
 		    			</div>
 		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
 		    				<center>
-		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/GreenHome.png') }}">
-		    					<p class="lead" style="text-align: center;">Rumah dengan Konsep sehat dan hijau
+		    					<img class="img-circle" id="myImg4" alt="Rumah dengan Konsep sehat dan hijau" style="max-width: 65%;" src="{{ asset('assets/img/amenities/GreenHome.png') }}">
+		    					<p class="lead" style="text-align: center;">Rumah dengan konsep sehat dan hijau</p>
 		    				</center>
 		    			</div>
 		    		</div>
 		    		<div class="row">
 		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
 		    				<center>
-		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Location.png') }}">
-		    					<p class="lead" style="text-align: center;">Lokasi Strategis di Kota Bogor</p>
+		    					<img class="img-circle" id="myImg5" alt="Lokasi Strategis di Kota Bogor" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Location.png') }}">
+		    					<p class="lead" style="text-align: center;">Lokasi strategis di Kota Bogor</p>
 		    				</center>
 		    			</div>
 		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
 		    				<center>
-		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/material.png') }}">
+		    					<img class="img-circle" id="myImg6" alt="Material menggunakan bahan nomer 1" style="max-width: 65%;" src="{{ asset('assets/img/amenities/material.png') }}">
 		    					<p class="lead" style="text-align: center;">Material menggunakan bahan nomer 1</p>
 		    				</center>
 		    			</div>
 		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
 		    				<center>
-		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Playground.png') }}">
+		    					<img class="img-circle" id="myImg7" alt="Lingkungan yang ramah bagi anak" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Playground.png') }}">
 		    					<p class="lead" style="text-align: center;">Lingkungan yang ramah bagi anak</p>
 		    				</center>
 		    			</div>
 		    			<div class="col-xs-6 col-md-3" style="margin-bottom: 25px;">
 		    				<center>
-		    					<img class="img-circle" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Sertifikat.png') }}">
-		    					<p class="lead" style="text-align: center;">Ready Stok Unit 8 Bulan</p>
+		    					<img class="img-circle" id="myImg8" alt="Ready Stok Unit 8 Bulan" style="max-width: 65%;" src="{{ asset('assets/img/amenities/Sertifikat.png') }}">
+		    					<p class="lead" style="text-align: center;">Ready stok unit 8 Bulan</p>
 		    				</center>
 		    			</div>
 		    		</div>
@@ -103,7 +195,7 @@
 			        <img class="img-responsive" src="{{ asset('assets/img/Type-A.jpg') }}">
 			      </div>
 			      <div class="col-md-5">
-			      	<h3>Type A</h3>
+			      	<h3>Bamboo Terrace 1</h3>
 			      	<h4>
 			      		Rumah 2 Lantai
 			      	</h4>
@@ -123,7 +215,7 @@
 			        <img class="img-responsive" src="{{ asset('assets/img/Type-B.jpg') }}">
 			      </div>
 			      <div class="col-sm-12 col-md-5 col-md-pull-5">
-			      	<h3>Type B</h3>
+			      	<h3>Bamboo Terrace 2</h3>
 			      	<h4>
 			      		Rumah 2 Lantai
 			      	</h4>
@@ -143,7 +235,7 @@
 			        <img class="img-responsive" src="{{ asset('assets/img/Type-C.jpg') }}">
 			      </div>
 			      <div class="col-md-5">
-			      	<h3>Type C</h3>
+			      	<h3>Bamboo Terrace 3</h3>
 			      	<h4>
 			      		Rumah 2 Lantai
 			      	</h4>
@@ -191,6 +283,12 @@
 		</div>
 		<div class="hidden-sm hidden-xs" id="map"></div> 
 	</section>
+
+	<div id="myModal" class="modal">
+	  <span class="close">&times;</span>
+	  <img class="modal-content" id="img01">
+	  <div id="caption"></div>
+	</div>
 {% endblock body %}
 {% block javascripts %}
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeab5YNirebzfm3JeD5QQIFooi-_7JLqo&callback=initMap"></script>
@@ -207,6 +305,184 @@
 		  	});
 		}
 	</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg4');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg5');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg6');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg7');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg8');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		var frm = $("#send-inquiry");
